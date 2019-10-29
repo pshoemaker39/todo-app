@@ -1,0 +1,26 @@
+When the user navigates to the dashboard component it displays a list of todo items as well as
+a component for adding new todo items.
+
+A todo item displays text describing the task as well as three colored buttons containing text
+the following text [urgent, days, week]. each indicates the dueDate for the task.
+
+When the user clicks one of the buttons it should change color of the button to indicate
+how timely the task needs to be completed.  only one button should have an active color at a time.
+this can be done using the ngClass directive.
+
+Each button when selected changes the state of the todo item.
+Todo this create a member function that binds to the button click event passing the todo item as one parameter.
+The function should update the dueDate property of the todo-item class associated with the object.
+
+Store the todo list items in an array in the todo-service.  you can instantiate the array with some
+pre built todo items.  be sure to inject the service into component(s) where needed.
+Add three functions to the service,
+
+1. a function for adding a new todo item to the array of todo items
+2. a function for updating the dueDate property of a todo item object
+3. [extra credit 2] a function for removing a todo item from the todo item array
+   (in addition add a button to the todo item component that when clicked removes it from
+   the array)
+
+Tip:  you can use the index value in a ngFor directive to get the location of an item in an array.
+This can be used to update the todo items array.
