@@ -1,8 +1,12 @@
 When the user navigates to the dashboard component it displays a list of todo items as well as
 a component for adding new todo items.
 
+--done
+
 A todo item displays text describing the task as well as three colored buttons containing text
 the following text [urgent, days, week]. each indicates the dueDate for the task.
+
+--done
 
 When the user clicks one of the buttons it should change color of the button to indicate
 how timely the task needs to be completed.  only one button should have an active color at a time.
@@ -16,7 +20,12 @@ Store the todo list items in an array in the todo-service.  you can instantiate 
 pre built todo items.  be sure to inject the service into component(s) where needed.
 Add three functions to the service,
 
+--done
+
 1. a function for adding a new todo item to the array of todo items
+
+--done
+
 2. a function for updating the dueDate property of a todo item object
 3. [extra credit 2] a function for removing a todo item from the todo item array
    (in addition add a button to the todo item component that when clicked removes it from

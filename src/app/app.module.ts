@@ -10,6 +10,8 @@ import { TodoListComponent } from "./todo-list/todo-list.component";
 import { NewTodoItemComponent } from "./new-todo-item/new-todo-item.component";
 import { PageNotFoundComponent } from "./page-not-found/page-not-found.component";
 
+import { FormsModule } from "@angular/forms";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +21,7 @@ import { PageNotFoundComponent } from "./page-not-found/page-not-found.component
     NewTodoItemComponent,
     PageNotFoundComponent
   ],
-  imports: [BrowserModule, AppRoutingModule, AngularFirestore],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent]
 })

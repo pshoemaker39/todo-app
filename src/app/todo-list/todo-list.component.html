@@ -1,1 +1,11 @@
-<p>todo-list works!</p>
+<ng-container *ngFor="let todo of todos">
+  <br />
+  <span>Description: {{ todo.description }} </span>
+  <br />
+  <span>Date: {{ todo.date }} </span>
+  <br />
+  <button [ngClass]="{ urgent: todo.state == 'Urgent' }">Urgent</button>
+  <button [ngClass]="{ days: todo.state == 'Days' }">Days</button>
+  <button [ngClass]="{ weeks: todo.state == 'Week' }">Weeks</button>
+  <br />
+</ng-container>

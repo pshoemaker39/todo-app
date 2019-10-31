@@ -1,1 +1,12 @@
-<p>new-todo-item works!</p>
+<h1>New Todo</h1>
+
+<form #todoForm="ngForm" (ngSubmit)="onSubmit(todoForm)">
+  <input type="desc" name="desc" placeholder="Some todo" ngModel />
+  <br />
+
+  <input type="date" name="date" ngModel />
+  <br />
+
+  <br />
+  <input type="submit" value="Create" />
+</form>
