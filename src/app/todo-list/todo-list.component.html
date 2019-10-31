@@ -1,11 +1,47 @@
-<ng-container *ngFor="let todo of todos">
+<ng-container *ngFor="let todo of todos; index as i">
   <br />
   <span>Description: {{ todo.description }} </span>
   <br />
   <span>Date: {{ todo.date }} </span>
   <br />
-  <button [ngClass]="{ urgent: todo.state == 'Urgent' }">Urgent</button>
-  <button [ngClass]="{ days: todo.state == 'Days' }">Days</button>
-  <button [ngClass]="{ weeks: todo.state == 'Week' }">Weeks</button>
+  <button
+    [ngClass]="{ urgent: todo.state == 'Urgent' }"
+    (click)="todo.state = 'Urgent'"
+  >
+    Urgent
+  </button>
+  <button
+    [ngClass]="{ days: todo.state == 'Days' }"
+    (click)="todo.state = 'Days'"
+  >
+    Days
+  </button>
+  <button
+    [ngClass]="{ weeks: todo.state == 'Week' }"
+    (click)="todo.state = 'Week'"
+  >
+    Weeks
+  </button>
+  <br />
+
+  <button (click)="todo.update = !todo.update">Edit</button>
+
+  <form [ngClass]="{ hideForm: todo.update != true }" #updateForm="ngForm">
+    <input
+      type="desc"
+      name="desc"
+      placeholder="{{ todo.description }} "
+      ngModel
+    />
+    <br />
+
+    <input type="date" name="newDate" ngModel />
+    <br />
+
+    <br />
+    <input type="submit" value="Update" (click)="todo.date = newDate" />
+    <br />
+    <hr />
+  </form>
   <br />
 </ng-container>

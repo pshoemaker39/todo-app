@@ -12,6 +12,8 @@ When the user clicks one of the buttons it should change color of the button to 
 how timely the task needs to be completed.  only one button should have an active color at a time.
 this can be done using the ngClass directive.
 
+--done
+
 Each button when selected changes the state of the todo item.
 Todo this create a member function that binds to the button click event passing the todo item as one parameter.
 The function should update the dueDate property of the todo-item class associated with the object.
@@ -27,6 +29,8 @@ Add three functions to the service,
 --done
 
 2. a function for updating the dueDate property of a todo item object
+
+
 3. [extra credit 2] a function for removing a todo item from the todo item array
    (in addition add a button to the todo item component that when clicked removes it from
    the array)

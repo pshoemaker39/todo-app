@@ -2,6 +2,7 @@
 // randDate: https://stackoverflow.com/questions/9035627/elegant-method-to-generate-array-of-random-dates-within-two-dates
 
 import { Component, OnInit } from "@angular/core";
+import { NgForm } from "@angular/forms";
 
 @Component({
   selector: "app-todo-item",
@@ -46,6 +47,7 @@ export class TodoItemComponent implements OnInit {
 
   createRealTodo(desc: string, date: Date) {
     let newTodo: any = {};
+    newTodo.update = false;
     newTodo.description = desc;
     newTodo.date = date;
     return newTodo;
